@@ -126,6 +126,12 @@
   padding: 5px;
   border-radius: 4px;
   transition: all ease 0.3s;
+  cursor: pointer;
+}
+
+.product-item .product-links button:disabled {
+  opacity: 0.4;
+  cursor: no-drop;
 }
 
 .product-item .product-links button:hover,
@@ -137,6 +143,7 @@
   color: #fff;
   font-size: 14px;
   display: flex;
+  pointer-events: none;
 }
 
 .product-wrapper {

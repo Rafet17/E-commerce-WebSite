@@ -3,10 +3,9 @@ import { product1 } from "./glide.js";
 let products = localStorage.getItem("products")
   ? JSON.parse(localStorage.getItem("products"))
   : [];
- let cart = localStorage.getItem("cart")
+let cart = localStorage.getItem("cart")
   ? JSON.parse(localStorage.getItem("cart"))
   : [];
-
 
 
 function addToCart() {
@@ -29,6 +28,18 @@ function addToCart() {
         cartItems.innerHTML = cart.length;
       });
     }
+  });
+}
+
+function productRoute() {
+  const productLink = document.getElementsByClassName("product-link");
+  Array.from(productLink).forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      const id = e.target.dataset.id;
+      localStorage.setItem("productId", JSON.stringify(id));
+      window.location.href = "single-product.html";
+    });
   });
 }
 
@@ -76,7 +87,7 @@ function productsFunc() {
           <button>
             <i class="bi bi-heart-fill"></i>
           </button>
-          <a href="#">
+          <a href="#" class="product-link" data-id=${item.id}>
             <i class="bi bi-eye-fill"></i>
           </a>
           <a href="#">
@@ -90,6 +101,7 @@ function productsFunc() {
     addToCart();
   });
   product1();
+  productRoute();
 }
 
 export default productsFunc;

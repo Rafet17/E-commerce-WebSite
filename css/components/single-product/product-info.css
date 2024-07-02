@@ -1,12 +1,7 @@
 .site-main .product-info {
     width: 50%;
     padding-left: 15px;
-}
-
-.site-main .product-title {
-    font-size: 24px;
-    font-weight: 500
-}
+}   
 
 .site-main .product-review {
     display: flex;

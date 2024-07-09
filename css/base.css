@@ -8,7 +8,7 @@
     font-family: 'Jost', sans-serif;
 }
 
-body{
+body {
     overflow-x: hidden;
 }
 
@@ -22,7 +22,7 @@ ol {
 a {
     text-decoration: none;
     color: #000;
-    
+
 }
 
 h1,
@@ -50,6 +50,15 @@ p {
 button {
     cursor: pointer;
     border: none;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: no-drop;
+}
+
+button:disabled {
+    
 }
 
 .btn {
@@ -80,7 +89,7 @@ button {
     color: #1367ef;
 }
 
-textarea{
+textarea {
     overflow: auto;
 }
 
@@ -106,7 +115,7 @@ input[type="number"]::-webkit-inner-spin-button {
     opacity: 1;
 }
 
-.img-fluid{
+.img-fluid {
     width: 100%;
 }
 

@@ -129,10 +129,7 @@
   cursor: pointer;
 }
 
-.product-item .product-links button:disabled {
-  opacity: 0.4;
-  cursor: no-drop;
-}
+
 
 .product-item .product-links button:hover,
 .product-item .product-links a:hover {
